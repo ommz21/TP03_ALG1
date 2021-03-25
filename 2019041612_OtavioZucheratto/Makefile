@@ -10,7 +10,7 @@ MEM_LEAK=valgrind --leak-check=full --track-origins=yes --show-reachable=yes
 $(EXEC): main.cpp metro.o
 	$(CC) $(CFLAGS) main.cpp metro.o -o $(EXEC)
 
-grafo.o: headers/metro.o
+metro.o: headers/metro.o
 	$(CC) $(CFLAGS) -c headers/metro.cpp -o metro.o
 
 all: $(EXEC)
